@@ -6,13 +6,11 @@ import { useState } from "react";
 import HomePageSlides from "../../data";
 
 const Container = styled.div`
-    /* margin-top: 3px; */
     width: 100%;
     height: 100vh;
     display: flex;
     background-color: #229076;
     position: relative;
-    /* border-radius: 10px; */
     overflow: hidden;
 `
 
@@ -26,7 +24,8 @@ const Wrapper = styled.div`
 const Arrow = styled.div`
     width: 50px;
     height: 50px;
-    background-color: white;
+    color: white;
+    scale: 2;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -44,6 +43,7 @@ const Arrow = styled.div`
 `
 
 const Slide = styled.div`
+    z-index: 1;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -55,6 +55,16 @@ const Image = styled.img`
 
 const ImageContainer = styled.div`
     width: 100%;
+`
+
+const Button = styled.div`
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    margin: 300px auto 0px 725px;
+    padding: 15px;
+    position: absolute;
+    border: 2px solid black;
 `
 
 function Slider() {
@@ -77,6 +87,7 @@ function Slider() {
             <Wrapper slideIndex={slideIndex}>
                 {HomePageSlides.map((item) => (
                     <Slide>
+                        <Button className="sliderButton">BUY NOW</Button>
                         <img src={item.img} alt={item.name} key={item.id} className="ImageClass" height={484} width={1536} />
                     </Slide>
                 ))}

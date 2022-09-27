@@ -11,8 +11,8 @@ const Container = styled.div`
 
 function CategoryContentBox(props) {
     return (
-        <Container>
-            <img src={props.url} width={300} height={180}/>
+        <Container className="productBox">
+            <img src={props.url} width={300} height={180} className="imageProductBox"/>
             <h5>{props.title}</h5>
             <p>₹{props.price}</p>
         </Container>

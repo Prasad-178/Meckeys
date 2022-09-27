@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Slider from './components/Slider'
 import Category from './components/Category'
+import Footer from './components/Footer'
 
 const Homepage = () => {
   return (
@@ -11,6 +12,7 @@ const Homepage = () => {
       <Category categoryHeading="Keyboard" />
       <Category categoryHeading="Mouse" />
       <Category categoryHeading="Headphones" />
+      <Footer />
     </div>
   )
 }

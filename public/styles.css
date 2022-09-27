@@ -1,6 +1,9 @@
 * {
     font-family: 'DM Sans', sans-serif;
-    /* background-color: black; */
+}
+
+body {
+    background-color: black;
 }
 
 .homepage {
@@ -9,7 +12,12 @@
 
 .heading {
     margin-left: 20px;
-    color: ornge;
+    color: orange;
+}
+
+.heading:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .navbar-main {
@@ -31,32 +39,41 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    padding-bottom: 5px;
     background-color: rgb(83, 81, 201);
     color: orange;
-    /* border-radius: 15px; */
     height: 60px;
 }
 
 .left-navbar {
     display: flex;
     align-items: center;
-    flex: 1;
+    /* flex: 1; */
 }
 
-.center-navbar {
+/* .center-navbar {
     flex: 1;
-}
+} */
 
 .right-navbar {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     align-items: center;
     justify-content: flex-end;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .right-nav-element {
     margin-right: 30px;
+}
+
+.right-nav-element:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.cart {
+    margin-right: 60px;
 }
 
 .searchContainer {
@@ -83,27 +100,153 @@ input:focus, textarea:focus {
     border: none;
 }
 
+.searchButton:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .ImageClass {
     height: 100%;
     width: 100%;
     padding-bottom: 0;
+    opacity: 0.7;
+    position: relative;
 }
 
 .slider {
     z-index: 0;
 }
 
+.sliderButton:hover {
+    background-color: black;
+    opacity: 1;
+    cursor: pointer;
+}
+
 .cat {
     color: white;
     text-align: center;
-    background-color: black;
     padding-top: 20px;
     padding-left: 60px;
     padding-right: 60px;
+    border: 1px solid rgb(193, 8, 8);
+    margin-top: 10px;
+    padding-bottom: 30px;
+    justify-content: space-between;
 }
 
 .CategoryHeading {
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.seeProducts {
+    color: white;
+    background-color: rgba(13, 14, 14, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 12px;
+}
+
+.seeProducts:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.1s ease;
+}
+
+.buynowButton {
+    z-index: 2;
+    font-size: 12px;
+    background-color: black;
+    position: absolute;
+    padding: 10px;
+    visibility: hidden;
+}
+
+.mouseCategory {
+    background-color: rgb(67, 87, 160);
+}
+
+.keyboardCategory {
+    background-color: rgb(234, 67, 117);
+}
+
+.headphoneCategory {
+    background-color: rgb(203, 75, 75);
+}
+
+.imageProductBox {
+    z-index: 1;
+}
+
+.imageProductBox:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.productBox {
+    position: relative;
+}
+
+.divproductbox:hover > .buynowButton {
+    background-color: black;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.buynowButton:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    color: white;
+    font-weight: 400;
+    padding-left: 100px;
+    line-height: 30px;
+}
+
+.footer hr {
+    max-width: 100%;
+}
+
+.liFooter {
+    color: white;
+    text-decoration: none;
+    opacity: 0.6;
+    list-style: square;
+}
+
+.hrtag {
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.crt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.socials {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.linkedinLink {
+    color: white;
+    text-align: center;
+}
+
+.linkedinLink:hover {
+    opacity: 0.7;
 }

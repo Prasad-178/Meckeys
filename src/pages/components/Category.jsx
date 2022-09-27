@@ -10,54 +10,64 @@ const CategoryDiv = styled.div`
     overflow: hidden;
 `
 
+const BuyNow = styled.div`
+    background-color: transparent;
+    position: absolute;
+    border: 2px solid black;
+    margin-left: 150px;
+    margin-top: 110px;
+`
+
 function Category(props) {
     var ch = props.categoryHeading;
     if (ch === "Mouse") {
         return (
-            <div className="cat">
+            <div className="cat mouseCategory">
                 <h1 className="CategoryHeading">MICE</h1>
                 <CategoryDiv>
                     {Mouse.map((item) => (
-                        <CategoryContentBox url={item.img} key={item.id} title={item.title} price={item.price}/>
+                        <div className="divproductbox">
+                            <BuyNow className="buynowButton">BUY NOW</BuyNow>
+                            <CategoryContentBox className="catconbox" url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
+                        </div>
                     ))}
                 </CategoryDiv>
+                <button className="seeProducts">SEE ALL PRODUCTS</button>
             </div>
         )
     }
     else if (ch === "Keyboard") {
         return (
-            <div className="cat">
+            <div className="cat keyboardCategory">
                 <h1 className="CategoryHeading">KEYBOARDS</h1>
                 <CategoryDiv>
                     {Keyboard.map((item) => (
-                        <CategoryContentBox url={item.img} key={item.id} title={item.title} price={item.price}/>
+                        <div className="divproductbox">
+                            <BuyNow className="buynowButton">BUY NOW</BuyNow>
+                            <CategoryContentBox className="catconbox" url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
+                        </div>
                     ))}
                 </CategoryDiv>
+                <button className="seeProducts">SEE ALL PRODUCTS</button>
             </div>
         )
     }
     else {
         return (
-            <div className="cat">
+            <div className="cat headphoneCategory">
                 <h1 className="CategoryHeading">HEADPHONES</h1>
                 <CategoryDiv>
-                    {Mouse.map((item) => (
-                        <CategoryContentBox url={item.img} key={item.id} title={item.title} price={item.price}/>
+                    {Headphones.map((item) => (
+                        <div className="divproductbox">
+                            <BuyNow className="buynowButton">BUY NOW</BuyNow>
+                            <CategoryContentBox className="catconbox" url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
+                        </div>
                     ))}
                 </CategoryDiv>
+                <button className="seeProducts">SEE ALL PRODUCTS</button>
             </div>
         )
     }
-    // return (
-    //     <div className="cat">
-    //         <h1 className="CategoryHeading">{props.categoryHeading}</h1>
-    //         <CategoryDiv>
-    //             {Categories.map((item) => (
-    //                 <CategoryContentBox url={item.img} key={item.id} title={item.title} price={item.price}/>
-    //             ))}
-    //         </CategoryDiv>
-    //     </div>
-    // )
 }
 
 export default Category
