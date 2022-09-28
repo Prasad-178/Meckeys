@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Footer() {
     return (
-        <div>
+        <div className="footer-main">
             <div className="footer">
                 <h5>POLICY</h5>
                 <ul>

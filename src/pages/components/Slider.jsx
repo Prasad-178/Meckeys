@@ -49,13 +49,13 @@ const Slide = styled.div`
     align-items: center;
 `
 
-const Image = styled.img`
-    height: 80%;
-`
+// const Image = styled.img`
+//     height: 80%;
+// `
 
-const ImageContainer = styled.div`
-    width: 100%;
-`
+// const ImageContainer = styled.div`
+//     width: 100%;
+// `
 
 const Button = styled.div`
     background-color: black;

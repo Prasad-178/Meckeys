@@ -13,6 +13,7 @@ body {
 .heading {
     margin-left: 20px;
     color: orange;
+    text-decoration: none;
 }
 
 .heading:hover {
@@ -83,6 +84,7 @@ body {
 
 .inputBox {
     width: 300px;
+    color: white;
     height: 25px;
     border-radius: 10px;
     border-color: rgb(7, 35, 243);
@@ -166,15 +168,15 @@ input:focus, textarea:focus {
 }
 
 .mouseCategory {
-    background-color: rgb(67, 87, 160);
+    background-color: rgb(7, 23, 75);
 }
 
 .keyboardCategory {
-    background-color: rgb(234, 67, 117);
+    background-color: rgb(7, 23, 75);
 }
 
 .headphoneCategory {
-    background-color: rgb(203, 75, 75);
+    background-color: rgb(7, 23, 75);
 }
 
 .imageProductBox {
@@ -214,6 +216,10 @@ input:focus, textarea:focus {
     max-width: 100%;
 }
 
+.footer-main {
+    background-color: black;
+}
+
 .liFooter {
     color: white;
     text-decoration: none;
@@ -249,4 +255,49 @@ input:focus, textarea:focus {
 
 .linkedinLink:hover {
     opacity: 0.7;
+}
+
+.tANDcmain {
+    display: flex;
+    flex-direction: column;
+}
+
+.tANDcPara {
+    color: white;
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.space {
+    background-color: rgb(83, 81, 201);
+    height: 30px;
+}
+
+.kbpage {
+    background-color: rgb(83, 81, 201);
+    opacity: 0.6;
+}
+
+.prod-main {
+    color: white;
+    padding-left: 150px;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    padding-right: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftProductPage {
+    margin-right: 30px;
+    padding-top: 20px;
+}
+
+.prodpagehead {
+    font-weight: 600;
+}
+
+.proddesc {
+    line-height: 50px;
 }

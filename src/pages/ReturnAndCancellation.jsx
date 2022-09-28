@@ -4,10 +4,10 @@ import Footer from "./components/Footer";
 
 const TermsAndConditions = () => {
     return (
-        <div className="tANDcmain">
+        <div className="return-and-cancellation">
             <Navbar />
             <div className="tANDcPara">
-                <h1>TERMS AND CONDITIONS</h1>
+                <h1>RETURN AND CANCELLATION</h1>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error non at praesentium voluptate earum saepe ipsa, fugit nisi sapiente ut mollitia distinctio! Nisi, quod fuga? Nulla enim at fugiat quis praesentium quidem harum doloremque illo sint voluptatem dolorem, facere libero?
              </div>
             <Footer />

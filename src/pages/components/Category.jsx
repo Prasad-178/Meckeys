@@ -2,6 +2,7 @@ import React from "react";
 import { Mouse, Keyboard, Headphones } from "../../data";
 import CategoryContentBox from "./CategoryContentBox";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const CategoryDiv = styled.div`
     display: flex;
@@ -32,7 +33,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                <button className="seeProducts">SEE ALL PRODUCTS</button>
+                <Link to="mouse-list"> <button className="seeProducts">SEE ALL PRODUCTS</button> </Link>
             </div>
         )
     }
@@ -48,7 +49,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                <button className="seeProducts">SEE ALL PRODUCTS</button>
+                <Link to="keyboard-list"> <button className="seeProducts">SEE ALL PRODUCTS</button> </Link>
             </div>
         )
     }
@@ -64,7 +65,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                <button className="seeProducts">SEE ALL PRODUCTS</button>
+                <Link to="headphone-list"> <button className="seeProducts">SEE ALL PRODUCTS</button> </Link>
             </div>
         )
     }
