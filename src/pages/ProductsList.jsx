@@ -25,7 +25,7 @@ function ProductsList(props) {
     var ch = props.categoryHeading
     if (ch === "Keyboard") {
         return (
-            <div className="kbpage">
+            <div>
                 <Navbar />
                 <div className="space"></div>
                 <Category categoryHeading = "Keyboard"/>

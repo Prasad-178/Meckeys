@@ -7,6 +7,8 @@ import ProductsList from "./pages/ProductsList";
 import A404Page from "./pages/A404Page";
 import ReturnAndCancellation from "./pages/ReturnAndCancellation";
 import ProductPage from "./pages/ProductPage";
+import LoginRegister from "./pages/LoginRegister";
+import ShoppingCart from "./pages/ShoppingCart";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Route path="privacy-policy" element={<PrivacyPolicy />}></Route>
       <Route path="return-and-cancellation" element={<ReturnAndCancellation />}></Route>
       <Route path="product-page" element={<ProductPage />}></Route>
+      <Route path="login-register" element={<LoginRegister />}></Route>
+      <Route path="cart" element={<ShoppingCart />}></Route>
       <Route path="*" element={<A404Page />}></Route>
     </Routes>
   );

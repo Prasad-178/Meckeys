@@ -31,10 +31,10 @@ function Navbar() {
                     <SearchField />
                 </div>
                 <div className="right-navbar">
-                    <Link to="/keyboard-list"> <p className="right-nav-element"> <KeyboardIcon /> </p> </Link>
-                    <Link to="/mouse-list"> <p className="right-nav-element"> <MouseIcon /> </p> </Link>
-                    <Link to="/headphone-list"> <p className="right-nav-element"> <HeadphonesIcon /> </p> </Link>
-                    <p className="right-nav-element"> <AccountCircleIcon /> </p>
+                    <Link to="/keyboard-list"> <p className="right-nav-element"> <KeyboardIcon style={{color: "gold"}} /> </p> </Link>
+                    <Link to="/mouse-list"> <p className="right-nav-element"> <MouseIcon style={{color: "gold"}} /> </p> </Link>
+                    <Link to="/headphone-list"> <p className="right-nav-element"> <HeadphonesIcon style={{color: "gold"}} /> </p> </Link>
+                    <Link to="/login-register"> <p className="right-nav-element"> <AccountCircleIcon style={{color: "gold"}} /> </p> </Link>
                     {/* <p className="right-nav-element">LOGIN</p> */}
                     <Badge badgeContent={4} color="primary" className="right-nav-element cart">
                         <ShoppingCartOutlined />

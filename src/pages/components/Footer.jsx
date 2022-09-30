@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div className="footer-main">
             <div className="footer">
-                <h5>POLICY</h5>
+                <p className="headlog">POLICY</p>
                 <ul>
                     <Link to="/terms-and-conditions" style={{color: "white", textDecoration: "none", width: "200px"}}> <li>Terms and Conditions</li> </Link>
                     <Link to="/privacy-policy" style={{color: "white", textDecoration: "none"}}><li>Privacy Policy</li></Link>
