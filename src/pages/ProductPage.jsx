@@ -1,13 +1,14 @@
-import { Add, Remove } from "@mui/icons-material";
-import { useParams } from "react-router-dom";
-import { Outlet } from "react-router-dom";
-import { Mouse, Keyboard, Headphones } from "../data";
+// import { Add, Remove } from "@mui/icons-material";
+// import { useParams } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
+// import { Mouse, Keyboard, Headphones } from "../data";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import styled from "styled-components";
 import { TextField } from "@mui/material";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { margin } from "@mui/system";
+// import { margin } from "@mui/system";
+import AddToCartContainer from "./components/AddToCartContainer";
  
 // function ProductPage() {
 //     const params = useParams()
@@ -19,43 +20,24 @@ import { margin } from "@mui/system";
 //     )
 // }
 
-const AddToCartContainer = styled.div`
-    display: flex;
-    align-items: center;
-    width: 60%;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 15px;
-    /* background-color: rgb(83, 81, 201); */
-    background-color: gold;
-    opacity: 0.7;
-    padding: 15px;
-    border-radius: 10px;
+// const Quantity = styled.div``
 
-    &:hover {
-        opacity: 1;
-        transition: all 0.3s ease;
-    }
-`
+// const Amount = styled.span``
 
-const Quantity = styled.div``
+// const Button = styled.button`
+//     margin-left: 20px;
+//     cursor: pointer;
+//     background-color: black;
+//     color: white;
+//     border: none;
+//     width: 300px;
+//     padding: 10px;
+//     text-align: center;
 
-const Amount = styled.span``
-
-const Button = styled.button`
-    margin-left: 20px;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    border: none;
-    width: 300px;
-    padding: 10px;
-    text-align: center;
-
-    &:hover {
-        opacity: 0.8;
-    }
-`
+//     &:hover {
+//         opacity: 0.8;
+//     }
+// `
 
 const Information = styled.div`
     color: white;
@@ -82,32 +64,12 @@ function ProductPage() {
                             <li>Lorem ipsum dolor sit amet.</li>
                         </ul>
                     </div>
-                    <AddToCartContainer>
-                        <TextField
-                            id="filled-number"
-                            label="Number"
-                            type="number"
-                            contentEditable="false"
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                            InputProps={{
-                                inputProps: {
-                                    min: 0, max: 2
-                                }
-                            }}
-                            variant="filled"
-                            defaultValue={1}
-                            sx={{input: {color: "white", borderColor: "white", width: "300px", fontWeight: "400"}}}
-                        />
-                        <Button><AddShoppingCartIcon />ADD TO CART</Button>
-                    </AddToCartContainer>
+                    <AddToCartContainer />
                 </div>
             </div>
             <hr className="hrtag"/>
             <Information>
                 <h2>ADDITIONAL INFORMATION</h2>
-
             </Information>
             <Footer />
         </div>

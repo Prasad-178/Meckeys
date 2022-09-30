@@ -276,7 +276,7 @@ input:focus, textarea:focus {
     color: white;
     padding-left: 150px;
     padding-top: 150px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     padding-right: 150px;
     display: flex;
     flex-direction: row;
@@ -369,4 +369,49 @@ input:focus, textarea:focus {
     font-size: 24px;
     font-weight: 500;
     color: gold;
+}
+
+.headingcart {
+    margin-top: 50px;
+    margin-left: 700px;
+}
+
+.carthead {
+    color: gold;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.pricesec {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content: space-between; */
+    border-left: 1px solid rgb(83, 81, 201);
+    padding-left: 30px;
+    font-weight: 600;
+    line-height: 15px;
+    margin-right: 50px;
+}
+
+.namediv {
+    display: flex;
+    letter-spacing: 1.5px;
+    font-size: 24px;
+    border-left: 1px solid rgb(83, 81, 201);
+    padding-left: 15px;
+    width: 350px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 500;
+    color: gold;
+    justify-content: center;
+}
+
+.qty {
+    color: gold;
+    font-weight: 600;
+    border-left: 1px solid rgb(83, 81, 201);
+    padding-left: 45px;
+    /* border-right: 1px solid red; */
 }

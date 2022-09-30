@@ -2,18 +2,21 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import styled from "styled-components";
-
-const CartMain = styled.div`
-    
-`
+import CartComponent from "./components/CartComponent";
 
 function ShoppingCart() {
     return (
         <div>
             <Navbar />
-            <CartMain>
-                <p></p>
-            </CartMain>
+            <div>
+                <div className="space"></div>
+                <div className="headingcart">
+                    <p className="carthead">CART</p>
+                </div>
+                <CartComponent />
+                <CartComponent />
+                <div className="space"></div>
+            </div>
             <Footer />
         </div>
     )

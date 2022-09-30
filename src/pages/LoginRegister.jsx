@@ -24,7 +24,7 @@ const LoginRegister = () => {
             <br />
             <button className='loginbutton' type="submit">LOGIN</button>
             <br />
-            <a href="" className='fp'>Forgot password?</a>
+            <a href="/" className='fp'>Forgot password?</a>
           </div>
 
           <div className='registerRight'>
