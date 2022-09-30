@@ -20,6 +20,12 @@ const BuyNow = styled.div`
 `
 
 function Category(props) {
+    var idClicked;
+    function extractId(id) {
+        idClicked = id
+        console.log("props id is : " + idClicked);
+        return idClicked + "";
+    }
     var ch = props.categoryHeading;
     if (ch === "Mouse") {
         return (
@@ -29,11 +35,11 @@ function Category(props) {
                     {Mouse.map((item) => (
                         <div className="divproductbox">
                             <BuyNow className="buynowButton">BUY NOW</BuyNow>
-                            <CategoryContentBox className="catconbox" url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
+                            <CategoryContentBox className="catconbox" type="mouse" link={idClicked} extractId = {() => extractId(item.id)} url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
                         </div>
                     ))}
                 </CategoryDiv>
-                <Link to="mouse-list"> <button className="seeProducts">SEE ALL PRODUCTS</button> </Link>
+                <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link>
             </div>
         )
     }
@@ -45,11 +51,11 @@ function Category(props) {
                     {Keyboard.map((item) => (
                         <div className="divproductbox">
                             <BuyNow className="buynowButton">BUY NOW</BuyNow>
-                            <CategoryContentBox className="catconbox" url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
+                            <CategoryContentBox className="catconbox" type="keyboard" link={idClicked} extractId = {() => extractId(item.id)} url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
                         </div>
                     ))}
                 </CategoryDiv>
-                <Link to="keyboard-list"> <button className="seeProducts">SEE ALL PRODUCTS</button> </Link>
+                <Link to="keyboard-list"> <button className="seeProducts">SEE ALL KEYBOARDS</button> </Link>
             </div>
         )
     }
@@ -59,13 +65,14 @@ function Category(props) {
                 <h1 className="CategoryHeading">HEADPHONES</h1>
                 <CategoryDiv>
                     {Headphones.map((item) => (
+                        // {console.log(item.id)}
                         <div className="divproductbox">
                             <BuyNow className="buynowButton">BUY NOW</BuyNow>
-                            <CategoryContentBox className="catconbox" url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
+                            <CategoryContentBox className="catconbox" type="headphone"link={idClicked} extractId = {() => extractId(item.id)} url={item.img} key={item.id} title={item.title} price={item.price} props={item}></CategoryContentBox>
                         </div>
                     ))}
                 </CategoryDiv>
-                <Link to="headphone-list"> <button className="seeProducts">SEE ALL PRODUCTS</button> </Link>
+                <Link to="headphone-list"> <button className="seeProducts">SEE ALL HEADPHONES</button> </Link>
             </div>
         )
     }

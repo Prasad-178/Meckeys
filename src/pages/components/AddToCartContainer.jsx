@@ -37,7 +37,7 @@ const Button = styled.button`
     }
 `
 
-const AddToCartContainer = () => {
+const AddToCartContainer = (props) => {
   return (
     <AddToCartContainerDiv>
         <TextField

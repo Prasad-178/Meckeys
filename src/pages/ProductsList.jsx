@@ -5,6 +5,7 @@ import { Mouse, Keyboard, Headphones } from "../data";
 import styled from "styled-components";
 import CategoryContentBox from "./components/CategoryContentBox";
 import Category from "./components/Category";
+import GoToTop from "./components/GoToTop";
 
 const CategoryDiv = styled.div`
     display: flex;
@@ -23,6 +24,7 @@ const BuyNow = styled.div`
 
 function ProductsList(props) {
     var ch = props.categoryHeading
+    var id = props.id
     if (ch === "Keyboard") {
         return (
             <div>
@@ -30,6 +32,7 @@ function ProductsList(props) {
                 <div className="space"></div>
                 <Category categoryHeading = "Keyboard"/>
                 <Footer />
+                <GoToTop />
             </div>
         )
     }
@@ -40,6 +43,7 @@ function ProductsList(props) {
                 <div className="space"></div>
                 <Category categoryHeading = "Mouse"/>
                 <Footer />
+                <GoToTop />
             </div>
         )
     }
@@ -50,6 +54,7 @@ function ProductsList(props) {
                 <div className="space"></div>
                 <Category categoryHeading ="Headphones"/>
                 <Footer />
+                <GoToTop />
             </div>
         )
     }

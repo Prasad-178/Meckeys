@@ -35,10 +35,10 @@ function Navbar() {
                     <Link to="/mouse-list"> <p className="right-nav-element"> <MouseIcon style={{color: "gold"}} /> </p> </Link>
                     <Link to="/headphone-list"> <p className="right-nav-element"> <HeadphonesIcon style={{color: "gold"}} /> </p> </Link>
                     <Link to="/login-register"> <p className="right-nav-element"> <AccountCircleIcon style={{color: "gold"}} /> </p> </Link>
-                    {/* <p className="right-nav-element">LOGIN</p> */}
-                    <Badge badgeContent={4} color="primary" className="right-nav-element cart">
-                        <ShoppingCartOutlined />
-                    </Badge>
+                    <Link to="/cart"> <Badge badgeContent={4} color="primary" className="right-nav-element cart">
+                        <ShoppingCartOutlined style={{color: "gold"}} />
+                        </Badge>
+                    </Link>
                 </div>
             </div>
         </div>

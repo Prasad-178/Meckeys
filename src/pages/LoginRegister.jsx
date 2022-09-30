@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import GoToTop from './components/GoToTop'
 
 const LoginRegister = () => {
   return (
@@ -44,6 +45,7 @@ const LoginRegister = () => {
         </div>
       </div>
       <Footer />
+      <GoToTop />
     </div>
   )
 }

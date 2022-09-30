@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Slider from './components/Slider'
 import Category from './components/Category'
 import Footer from './components/Footer'
+import GoToTop from './components/GoToTop'
 
 const Homepage = () => {
   return (
@@ -13,6 +14,7 @@ const Homepage = () => {
       <Category categoryHeading="Mouse" />
       <Category categoryHeading="Headphones" />
       <Footer />
+      <GoToTop />
     </div>
   )
 }

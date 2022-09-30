@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import styled from "styled-components";
 import CartComponent from "./components/CartComponent";
+import GoToTop from "./components/GoToTop";
 
 function ShoppingCart() {
     return (
@@ -18,6 +19,7 @@ function ShoppingCart() {
                 <div className="space"></div>
             </div>
             <Footer />
+            <GoToTop />
         </div>
     )
 }
