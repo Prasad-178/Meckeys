@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
@@ -27,9 +26,10 @@ function CategoryContentBox(props) {
 
     return (
         <Container className="productBox">
-            <img src={props.url} key={props.id} onClick={control} mouseId={props.key} width={300} height={180} className="imageProductBox"/>
-            <h5>{props.title}</h5>
-            <p>₹{props.price}</p>
+            <img src={props.url} alt={props.title} key={props.id} onClick={control} mouseId={props.key} width={300} height={180} className="imageProductBox"/>
+            <div>{props.rating}</div>
+            <p className="cattitle">{props.title}</p>
+            <p className="catprice">₹{props.price}</p>
         </Container>
     )
 }

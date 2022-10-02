@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-// import AddToCartContainer from './AddToCartContainer'
 import { TextField } from '@mui/material'
+import { Cart } from '../../data'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const CartMain = styled.div`
     display: flex;
@@ -21,44 +22,49 @@ const CartComponentDiv = styled.div`
 `
 
 const CartComponent = () => {
+    console.log(Cart[0])
   return (
     <CartMain>
-        <hr className="hrtag" />
-        <CartComponentDiv>
-            <br className="brtag"/>
-            <img className='imgcart' src="https://prosettings.net/wp-content/uploads/Ducky-One-3-Mini-Review-Featured.jpg" alt="Ducky One 3 Mini" width={240} height={144} />
-            <div className='namediv'>
-                <p>DUCKY ONE 3 MINI</p>
+        {Cart.map((i) => (
+            <div>
+                <hr className="hrtag" />
+                <CartComponentDiv>
+                    <br className="brtag"/>
+                    <DeleteIcon className="delcart" />
+                    <img className='imgcart' src={i.img} alt={i.title} width={240} height={144} />
+                    <div className='namediv'>
+                        <p>{i.title}</p>
+                    </div>
+                    <div className="pricesec">
+                        <p style={{color: "gold", fontSize: "16px"}}>PRICE</p>
+                        <p style={{fontSize: "20px"}}>{i.price}</p>
+                    </div>
+                    <div className='qty'>
+                        <p style={{fontSize: "16px", marginTop: "12.5px", marginBottom: "5px"}}>QUANTITY</p>
+                        <TextField
+                            id="filled-number"
+                            label="Number"
+                            type="number"
+                            contentEditable="false"
+                            InputLabelProps={{
+                                shrink: true,
+                                style: {color: "blue"}
+                            }}
+                            InputProps={{
+                                inputProps: {
+                                    min: 1, max: 2
+                                }
+                            }}
+                            variant="filled"
+                            defaultValue={1}
+                            sx={{input: {color: "white", borderColor: "white", width: "300px", fontWeight: "400"}}}
+                        />
+                    </div>
+                    <br className="brtag"/>
+                </CartComponentDiv>
+                <hr className="hrtag" />
             </div>
-            <div className="pricesec">
-                <p style={{color: "gold", fontSize: "16px"}}>PRICE</p>
-                <p style={{fontSize: "20px"}}>₹7,499</p>
-            </div>
-            {/* <AddToCartContainer /> */}
-            <div className='qty'>
-                <p style={{fontSize: "16px", marginTop: "12.5px", marginBottom: "5px"}}>QUANTITY</p>
-                <TextField
-                    id="filled-number"
-                    label="Number"
-                    type="number"
-                    contentEditable="false"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    InputProps={{
-                        inputProps: {
-                            min: 0, max: 2
-                        }
-                    }}
-                    variant="filled"
-                    defaultValue={1}
-                    sx={{input: {color: "white", borderColor: "white", width: "300px", fontWeight: "400"}}}
-                />
-            </div>
-            <br className="brtag"/>
-        </CartComponentDiv>
-        <hr className="hrtag" />
-
+        ))}
     </CartMain>
   )
 }

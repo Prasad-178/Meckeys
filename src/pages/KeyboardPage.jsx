@@ -1,37 +1,15 @@
-// import { Add, Remove } from "@mui/icons-material";
 import { useParams } from "react-router-dom";
-// import { Outlet } from "react-router-dom";
 import { Keyboard } from "../data";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import styled from "styled-components";
-import { TextField } from "@mui/material";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import AddToCartContainer from "./components/AddToCartContainer";
 import GoToTop from "./components/GoToTop";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
- 
-// function ProductPage() {
-//     const params = useParams()
-//     const mouseId = params.mouseId
-//     return (
-//         <div>
-//             Mouse id is : {Mouse[mouseId].title}
-//         </div>
-//     )
-// }
-
-const Information = styled.div`
-    color: white;
-    padding-left: 150px;
-    padding-bottom: 100px;
-`
+import { Cart } from "../data";
 
 function KeyboardPage() {
+    console.log(Cart.length)
     const params = useParams()
     const keyboardId = params.keyboardId
-    // console.log("mid is : " + mouseId)
-    // console.log(Mouse[0].desc)
     return (
         <div>
             <Navbar />
@@ -41,21 +19,35 @@ function KeyboardPage() {
                 </div>
                 <div className="rightProductPage">
                     <h1 className="prodpagehead">{Keyboard[keyboardId-1].title}</h1>
-                    <h2>₹{Keyboard[keyboardId-1].price}</h2>
+                    <h2 className="prodpageprice">₹{Keyboard[keyboardId-1].price}</h2>
                     <div className="proddesc" style={{color: "white"}}>
                         <ul className="proddesclist">
                             {Keyboard[keyboardId-1].desc.map((i) => (
-                                <li>{i.item}</li>
+                                <li className="pdlist">{i.item}</li>
                             ))}
                         </ul>
                     </div>
-                    <AddToCartContainer />
+                    <AddToCartContainer type={"Keyboard"} id={keyboardId-1} title={Keyboard[keyboardId-1].title} img={Keyboard[keyboardId-1].img} price={Keyboard[keyboardId-1].price} />
                 </div>
             </div>
             <hr className="hrtag"/>
-            {/* <Information>
-                <h2>ADDITIONAL INFORMATION</h2>
-            </Information> */}
+            <div className="proddescimg">
+                <p className="deschead">DESCRIPTION</p>
+                {Keyboard[keyboardId-1].descimg.map((i) => (
+                    <img className="imgdesc" src={i.img} alt="descimg" />
+                ))}
+            </div>
+            <hr className="hrtag" />
+            <div className="specs">
+                <p className="deschead">ADDITIONAL INFORMATION</p>
+                {Keyboard[keyboardId-1].inf.map((i) => (
+                    <div className="inf">
+                        <p className="infkey">{i.key}</p>
+                        <p className="infval">{i.value}</p>
+                    </div>
+                ))}
+            </div>
+            <div className="space"></div>
             <Footer />
             <GoToTop />
         </div>

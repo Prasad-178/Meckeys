@@ -1,60 +1,51 @@
-// import { Add, Remove } from "@mui/icons-material";
 import { useParams } from "react-router-dom";
-// import { Outlet } from "react-router-dom";
 import { Mouse } from "../data";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import styled from "styled-components";
-import { TextField } from "@mui/material";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import AddToCartContainer from "./components/AddToCartContainer";
 import GoToTop from "./components/GoToTop";
- 
-// function ProductPage() {
-//     const params = useParams()
-//     const mouseId = params.mouseId
-//     return (
-//         <div>
-//             Mouse id is : {Mouse[mouseId].title}
-//         </div>
-//     )
-// }
-
-const Information = styled.div`
-    color: white;
-    padding-left: 150px;
-    padding-bottom: 100px;
-`
 
 function MousePage() {
     const params = useParams()
     const mouseId = params.mouseId
-    // console.log("mid is : " + mouseId)
-    // console.log(Mouse[0].desc)
     return (
         <div>
             <Navbar />
             <div className="prod-main">
                 <div className="leftProductPage">
-                    <img src={Mouse[mouseId-1].img} alt={Mouse[mouseId-1].title} width={600} height={360} />
+                    <img src={Mouse[mouseId-1].img} alt={Mouse[mouseId-1].title} width={600} height={"auto"} />
                 </div>
                 <div className="rightProductPage">
                     <h1 className="prodpagehead">{Mouse[mouseId-1].title}</h1>
-                    <h2>₹{Mouse[mouseId-1].price}</h2>
+                    <h2 className="prodpageprice">₹{Mouse[mouseId-1].price}</h2>
                     <div className="proddesc" style={{color: "white"}}>
                         <ul className="proddesclist">
                             {Mouse[mouseId-1].desc.map((i) => (
-                                <li>{i.item}</li>
+                                <li className="pdlist">{i.item}</li>
                             ))}
                         </ul>
                     </div>
-                    <AddToCartContainer />
+                    <AddToCartContainer type={"Mouse"} id={mouseId-1} title={Mouse[mouseId-1].title} img={Mouse[mouseId-1].img} price={Mouse[mouseId-1].price} />
                 </div>
             </div>
             <hr className="hrtag"/>
-            {/* <Information>
-                <h2>ADDITIONAL INFORMATION</h2>
-            </Information> */}
+            <div className="proddescimg">
+                <p className="deschead">DESCRIPTION</p>
+                {Mouse[mouseId-1].descimg.map((i) => (
+                    <img className="imgdesc" src={Mouse[mouseId-1].descimg[0].img} alt="descimg" />
+                ))}
+            </div>
+            <hr className="hrtag" />
+            <div className="specs">
+                <p className="deschead">ADDITIONAL INFORMATION</p>
+                {Mouse[mouseId-1].inf.map((i) => (
+                    <div className="inf">
+                        <p className="infkey">{i.key}</p>
+                        <p className="infval">{i.value}</p>
+                    </div>
+                ))}
+            </div>
+            <div className="space"></div>
             <Footer />
             <GoToTop />
         </div>

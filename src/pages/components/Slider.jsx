@@ -4,6 +4,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useState } from "react";
 import HomePageSlides from "../../data";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -30,6 +31,7 @@ const Arrow = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
 
     // to center the arrows on the page : 
     position: absolute;
@@ -47,24 +49,24 @@ const Slide = styled.div`
     width: 100vw;
     display: flex;
     align-items: center;
+    animation: fadeIn 5s;
 `
 
-// const Image = styled.img`
-//     height: 80%;
-// `
-
-// const ImageContainer = styled.div`
-//     width: 100%;
-// `
-
 const Button = styled.div`
-    background-color: black;
+    background-color: transparent;
     color: white;
-    border: 2px solid black;
-    margin: 300px auto 0px 725px;
+    border: 1px solid gold;
+    margin: 300px auto 0px 700px;
     padding: 15px;
     position: absolute;
     border: 2px solid black;
+    transition: ease-in 0.2s;
+    z-index: 2;
+
+    &:hover {
+        background-color: black;
+        opacity: 0.9;
+    }
 `
 
 function Slider() {
@@ -79,6 +81,11 @@ function Slider() {
         }
     }
 
+    const navigate = useNavigate()
+    const openPage = () => {
+        navigate('/keyboard/1')
+    }
+
     return (
         <Container className="slider">
             <Arrow direction="left" onClick={() => handleClick("left")}>
@@ -86,12 +93,15 @@ function Slider() {
             </Arrow>
             <Wrapper slideIndex={slideIndex}>
                 {HomePageSlides.map((item) => (
-                    <Slide>
-                        <Button className="sliderButton">BUY NOW</Button>
-                        <img src={item.img} alt={item.name} key={item.id} className="ImageClass" height={484} width={1536} />
+                    <Slide className="fade-in-text">
+                        <p className="feathead">KEYCHRON K8 PRO</p>
+                        <p className="feattxt">QMK / VIA COMPATIBLE WIRELESS MECHANICAL KEYBOARD</p>
+                        <Button className="sliderButton" onClick={openPage}>BUY NOW</Button>
+                        <div className="fade-in-image">
+                            <img src={item.img} alt={item.name} key={item.id} className="ImageClass" height={484} width={"auto"} />
+                        </div>
                     </Slide>
                 ))}
-                
             </Wrapper>
             <Arrow direction="right" onClick={() => handleClick("right")}>
                 <ArrowForwardIosIcon />

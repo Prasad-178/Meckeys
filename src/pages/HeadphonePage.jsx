@@ -1,36 +1,15 @@
-// import { Add, Remove } from "@mui/icons-material";
 import { useParams } from "react-router-dom";
-// import { Outlet } from "react-router-dom";
 import { Headphones } from "../data";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import styled from "styled-components";
-import { TextField } from "@mui/material";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import AddToCartContainer from "./components/AddToCartContainer";
 import GoToTop from "./components/GoToTop";
- 
-// function ProductPage() {
-//     const params = useParams()
-//     const headphoneId = params.headphoneId
-//     return (
-//         <div>
-//             Headphones id is : {Headphones[headphoneId].title}
-//         </div>
-//     )
-// }
-
-const Information = styled.div`
-    color: white;
-    padding-left: 150px;
-    padding-bottom: 100px;
-`
+import { Cart } from "../data";
 
 function HeadphonePage() {
+    console.log(Cart.length)
     const params = useParams()
     const headphoneId = params.headphoneId
-    // console.log("mid is : " + headphoneId)
-    // console.log(Headphones[0].desc)
     return (
         <div>
             <Navbar />
@@ -40,21 +19,35 @@ function HeadphonePage() {
                 </div>
                 <div className="rightProductPage">
                     <h1 className="prodpagehead">{Headphones[headphoneId-1].title}</h1>
-                    <h2>₹{Headphones[headphoneId-1].price}</h2>
+                    <h2 className="prodpageprice">₹{Headphones[headphoneId-1].price}</h2>
                     <div className="proddesc" style={{color: "white"}}>
                         <ul className="proddesclist">
                             {Headphones[headphoneId-1].desc.map((i) => (
-                                <li>{i.item}</li>
+                                <li className="pdlist">{i.item}</li>
                             ))}
                         </ul>
                     </div>
-                    <AddToCartContainer />
+                    <AddToCartContainer type={"Headphones"} id={headphoneId-1} title={Headphones[headphoneId-1].title} img={Headphones[headphoneId-1].img} price={Headphones[headphoneId-1].price} />
                 </div>
             </div>
             <hr className="hrtag"/>
-            {/* <Information>
-                <h2>ADDITIONAL INFORMATION</h2>
-            </Information> */}
+            <div className="proddescimg">
+                <p className="deschead">DESCRIPTION</p>
+                {Headphones[headphoneId-1].descimg.map((i) => (
+                    <img className="imgdesc" src={i.img} alt="descimg" />
+                ))}
+            </div>
+            <hr className="hrtag" />
+            <div className="specs">
+                <p className="deschead">ADDITIONAL INFORMATION</p>
+                {Headphones[headphoneId-1].inf.map((i) => (
+                    <div className="inf">
+                        <p className="infkey">{i.key}</p>
+                        <p className="infval">{i.value}</p>
+                    </div>
+                ))}
+            </div>
+            <div className="space"></div>
             <Footer />
             <GoToTop />
         </div>

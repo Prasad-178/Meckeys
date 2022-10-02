@@ -2,6 +2,8 @@ import React from 'react'
 import styled from "styled-components";
 import { TextField } from "@mui/material";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Cart, Keyboard } from '../../data';
+import { useNavigate } from 'react-router-dom';
 
 const AddToCartContainerDiv = styled.div`
     display: flex;
@@ -10,9 +12,9 @@ const AddToCartContainerDiv = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-left: 15px;
-    /* background-color: rgb(83, 81, 201); */
-    background-color: gold;
-    opacity: 0.7;
+    /* background-color: gold; */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    opacity: 0.9;
     padding: 15px;
     border-radius: 10px;
 
@@ -38,26 +40,43 @@ const Button = styled.button`
 `
 
 const AddToCartContainer = (props) => {
+    const navigate = useNavigate()
+    function addToCart() {
+        console.log("props id is : " + props.id);
+        Cart.push({
+            id: Cart.length+1,
+            title: props.title,
+            type: props.type,
+            img: props.img,
+            price: props.price
+        })
+        navigate('/cart')
+    }
+
   return (
     <AddToCartContainerDiv>
         <TextField
-            id="filled-number"
+            id="outlined-number"
             label="Number"
             type="number"
             contentEditable="false"
             InputLabelProps={{
                 shrink: true,
+                style: {color: "blue"}
             }}
             InputProps={{
                 inputProps: {
-                    min: 0, max: 2
+                    min: 1, max: 2
+                },
+                borderColor: {
+                    color: "blue"
                 }
             }}
             variant="filled"
             defaultValue={1}
             sx={{input: {color: "white", borderColor: "white", width: "300px", fontWeight: "400"}}}
         />
-        <Button><AddShoppingCartIcon />ADD TO CART</Button>
+        <Button onClick={() => addToCart(props)}><AddShoppingCartIcon />ADD TO CART</Button>
     </AddToCartContainerDiv>
   )
 }

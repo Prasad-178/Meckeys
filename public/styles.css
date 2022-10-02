@@ -11,6 +11,7 @@ body {
 }
 
 .heading {
+    letter-spacing: 0.5px;
     margin-left: 20px;
     color: gold;
     text-decoration: none;
@@ -27,7 +28,7 @@ body {
     position: fixed;
     width: 99%;
     transition: top 0.3s;
-    border-bottom: 5px solid black;
+    border-bottom: 2px solid gold;
 }
 
 .navbar-main:hover {
@@ -49,16 +50,10 @@ body {
 .left-navbar {
     display: flex;
     align-items: center;
-    /* flex: 1; */
 }
-
-/* .center-navbar {
-    flex: 1;
-} */
 
 .right-navbar {
     display: flex;
-    /* flex: 1; */
     align-items: center;
     justify-content: flex-end;
     margin-left: 20px;
@@ -110,18 +105,18 @@ input:focus, textarea:focus {
 .ImageClass {
     height: 100%;
     width: 100%;
+    /* filter: brightness(0.7); */
     padding-bottom: 0;
-    opacity: 0.7;
-    position: relative;
 }
 
 .slider {
+    position: static;
     z-index: 0;
 }
 
 .sliderButton:hover {
     background-color: black;
-    opacity: 1;
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -132,14 +127,18 @@ input:focus, textarea:focus {
     padding-top: 20px;
     padding-left: 60px;
     padding-right: 60px;
-    /* border-top: 1px solid rgba(255, 255, 255, 0.385); */
     border-bottom: 1px solid rgba(255, 255, 255, 0.385);
     margin-top: 10px;
     padding-bottom: 30px;
     justify-content: space-between;
 }
 
+.keyboardCategory {
+    position: relative;
+}
+
 .CategoryHeading {
+    letter-spacing: 2.5px;
     color: gold;
     font-size: 30px;
     font-weight: 400;
@@ -163,12 +162,9 @@ input:focus, textarea:focus {
 }
 
 .buynowButton {
-    z-index: 2;
     font-size: 12px;
     background-color: black;
-    position: absolute;
     padding: 10px;
-    visibility: hidden;
 }
 
 .imageProductBox {
@@ -183,6 +179,15 @@ input:focus, textarea:focus {
 
 .productBox {
     position: relative;
+}
+
+.cattitle {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.catprice {
+    font-size: 14px;
 }
 
 .divproductbox:hover > .buynowButton {
@@ -221,8 +226,9 @@ input:focus, textarea:focus {
 }
 
 .hrtag {
-    margin-left: 90px;
-    margin-right: 90px;
+    color: rgb(83, 81, 201);
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .crt {
@@ -263,7 +269,6 @@ input:focus, textarea:focus {
 }
 
 .space {
-    /* background-color: rgb(83, 81, 201); */
     height: 50px;
 }
 
@@ -288,7 +293,12 @@ input:focus, textarea:focus {
 }
 
 .prodpagehead {
+    color: rgb(83, 81, 201);
     font-weight: 600;
+}
+
+.prodpageprice {
+    color: gold;
 }
 
 .proddesc {
@@ -303,12 +313,13 @@ input:focus, textarea:focus {
 }
 
 .myacc {
+    letter-spacing: 2.5px;
     font-weight: 500;
     color: gold;
 }
 
 .headinglogreg {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 400;
     margin-left: 550px;
 }
@@ -317,7 +328,7 @@ input:focus, textarea:focus {
     color: white;
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 100px;
+    padding-top: 70px;
     margin-bottom: 200px;
 }
 
@@ -353,7 +364,6 @@ input:focus, textarea:focus {
 .fp {
     opacity: 0.7;
     color: white;
-    /* margin-left: 10px; */
     margin-top: 20px;
 }
 
@@ -377,8 +387,9 @@ input:focus, textarea:focus {
 }
 
 .carthead {
+    letter-spacing: 2.5px;
     color: gold;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 28px;
 }
 
@@ -386,7 +397,6 @@ input:focus, textarea:focus {
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* justify-content: space-between; */
     border-left: 1px solid rgb(83, 81, 201);
     padding-left: 30px;
     font-weight: 600;
@@ -413,4 +423,99 @@ input:focus, textarea:focus {
     font-weight: 600;
     border-left: 1px solid rgb(83, 81, 201);
     padding-left: 45px;
+}
+
+.proddescimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.pdlist {
+    color: rgba(255, 255, 255, 0.788);
+    line-height: 35px;
+    /* letter-spacing: 0.5px; */
+}
+
+.deschead {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.788);
+    align-self:flex-start;
+    padding-left: 8%;
+    padding-top: 30px;
+}
+
+.specs {
+    color: white;
+}
+
+.inf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid rgb(83, 81, 201);
+    width: 400px;
+    height: auto;
+    margin-left: 130px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.infkey {
+    color: rgba(255, 255, 255, 0.788);
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.imgdesc {
+    width: 1150px;
+    height: auto;
+}
+
+.infval {
+    color: rgba(255, 255, 255, 0.45);
+    align-self: flex-end;
+}
+
+.spacepage {
+    height: 40px;
+}
+
+.feathead {
+    color: white;
+    font-size: 60px;
+    margin-left: 480px;
+    font-weight: 500;
+    position: absolute;
+    letter-spacing: 6px;
+    padding-bottom: 250px;
+    margin-bottom: 50px;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0; position: -100px; }
+    100% {opacity: 1; position: 0px;}
+}
+
+.fade-in-image {
+    animation: fadeIn 0.1s;
+    filter: brightness(0.7);
+}
+
+/* .fade-in-text {
+    animation: fadeIn 1s;
+} */
+
+.feattxt {
+    color: white;
+    font-size: 30px;
+    margin-left: 300px;
+    font-weight: 400;
+    position: absolute;
+    letter-spacing: 3px;
+    padding-bottom: 20px;
+    z-index: 2;
 }

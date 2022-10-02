@@ -11,7 +11,7 @@ const LoginRegister = () => {
         <div className='headinglogreg'>
           <p className='myacc'>MY ACCOUNT</p>
         </div>
-        <hr />
+        <hr className='hrtag'/>
         <div className='mainlogreg'>
           <div className='loginLeft'>
             <p className='headlog'>LOGIN</p>

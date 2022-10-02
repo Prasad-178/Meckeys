@@ -3,6 +3,7 @@ import { Mouse, Keyboard, Headphones } from "../../data";
 import CategoryContentBox from "./CategoryContentBox";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const CategoryDiv = styled.div`
     display: flex;
@@ -12,7 +13,8 @@ const CategoryDiv = styled.div`
 `
 
 const BuyNow = styled.div`
-    background-color: transparent;
+    color: white;
+    background-color: black;
     position: absolute;
     border: 2px solid black;
     margin-left: 150px;
@@ -26,11 +28,30 @@ function Category(props) {
         console.log("props id is : " + idClicked);
         return idClicked + "";
     }
+
     var ch = props.categoryHeading;
+    
+    const location = useLocation()
+    const path = location.pathname
+    console.log(path)
+
+    function url() {
+        if (path === "/") {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     if (ch === "Mouse") {
         return (
             <div className="cat mouseCategory">
                 <h1 className="CategoryHeading">MICE</h1>
+                {!url() ? <div>
+                        <hr className="hrtag" />
+                        <div className="spacepage"></div></div>
+                       :<p></p> }
                 <CategoryDiv>
                     {Mouse.map((item) => (
                         <div className="divproductbox">
@@ -39,7 +60,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link>
+                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : <p></p>}
             </div>
         )
     }
@@ -47,6 +68,10 @@ function Category(props) {
         return (
             <div className="cat keyboardCategory">
                 <h1 className="CategoryHeading">KEYBOARDS</h1>
+                {!url() ? <div>
+                        <hr className="hrtag" />
+                        <div className="spacepage"></div></div>
+                       :<p></p> }
                 <CategoryDiv>
                     {Keyboard.map((item) => (
                         <div className="divproductbox">
@@ -55,7 +80,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                <Link to="keyboard-list"> <button className="seeProducts">SEE ALL KEYBOARDS</button> </Link>
+                {url ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : null}
             </div>
         )
     }
@@ -63,15 +88,19 @@ function Category(props) {
         return (
             <div className="cat headphoneCategory">
                 <h1 className="CategoryHeading">HEADPHONES</h1>
+                {!url() ? <div>
+                        <hr className="hrtag" />
+                        <div className="spacepage"></div></div>
+                       :<p></p> }
                 <CategoryDiv>
                     {Headphones.map((item) => (
-                        // {console.log(item.id)}
                         <div className="divproductbox">
                             <BuyNow className="buynowButton">BUY NOW</BuyNow>
                             <CategoryContentBox className="catconbox" type="headphone"link={idClicked} extractId = {() => extractId(item.id)} url={item.img} key={item.id} title={item.title} price={item.price} props={item}></CategoryContentBox>
                         </div>
                     ))}
                 </CategoryDiv>
+
                 <Link to="headphone-list"> <button className="seeProducts">SEE ALL HEADPHONES</button> </Link>
             </div>
         )
