@@ -10,7 +10,7 @@ const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: #229076;
+    background-color: #000000;
     position: relative;
     overflow: hidden;
 `

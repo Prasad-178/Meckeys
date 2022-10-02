@@ -60,7 +60,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : <p></p>}
+                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : null}
             </div>
         )
     }
@@ -80,7 +80,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                {url ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : null}
+                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : null}
             </div>
         )
     }
@@ -100,8 +100,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-
-                <Link to="headphone-list"> <button className="seeProducts">SEE ALL HEADPHONES</button> </Link>
+                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : null}
             </div>
         )
     }

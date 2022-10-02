@@ -27,7 +27,7 @@ function HeadphonePage() {
                             ))}
                         </ul>
                     </div>
-                    <AddToCartContainer type={"Headphones"} id={headphoneId-1} title={Headphones[headphoneId-1].title} img={Headphones[headphoneId-1].img} price={Headphones[headphoneId-1].price} />
+                    <AddToCartContainer type={"Headphones"} id={Cart.length} title={Headphones[headphoneId-1].title} img={Headphones[headphoneId-1].img} price={Headphones[headphoneId-1].price} />
                 </div>
             </div>
             <hr className="hrtag"/>

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { TextField } from '@mui/material'
 import { Cart } from '../../data'
 import DeleteIcon from '@mui/icons-material/Delete';
+import { json, useNavigate } from 'react-router-dom';
 
 const CartMain = styled.div`
     display: flex;
@@ -22,7 +23,26 @@ const CartComponentDiv = styled.div`
 `
 
 const CartComponent = () => {
-    console.log(Cart[0])
+    const navigate = useNavigate()
+    function removeCart(id) {
+        console.log("index delete is : " + id-1)
+        Cart.splice(id-1, 1)
+        for (let i=0; i<Cart.length; i++) {
+            Cart[i].id = i+1;
+        }
+        {Cart.map((item) => (
+            console.log(item.id)
+        ))}
+        navigate('/cart') 
+    }
+
+    function cartIsEmpty() {
+        if (Cart.length() === 0) {
+            return true;
+        }
+        return false;
+    }
+
   return (
     <CartMain>
         {Cart.map((i) => (
@@ -30,7 +50,7 @@ const CartComponent = () => {
                 <hr className="hrtag" />
                 <CartComponentDiv>
                     <br className="brtag"/>
-                    <DeleteIcon className="delcart" />
+                    <div className="delcart" onClick={() => removeCart(i.id)}> <DeleteIcon /> </div>
                     <img className='imgcart' src={i.img} alt={i.title} width={240} height={144} />
                     <div className='namediv'>
                         <p>{i.title}</p>

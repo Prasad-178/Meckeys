@@ -25,7 +25,7 @@ function Navbar() {
         <div className="navbar-main">
             <div className="navbar-div">
                 <div className="left-navbar">
-                    <Link to="/" style={{textDecoration: 'none'}}> <h1 className="heading">🗲 ELITE GAMING</h1> </Link>
+                    <Link to="/" style={{textDecoration: 'none'}}> <h1 className="heading"> MECKEYS </h1> </Link>
                 </div>
                 <div className="center-navbar">
                     <SearchField />

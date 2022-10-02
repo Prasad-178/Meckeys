@@ -6,6 +6,12 @@ import GoToTop from "./components/GoToTop";
 import { Cart } from "../data";
 
 function ShoppingCart() {
+    function cartEmpty() {
+        if (Cart.length === 0) {
+            return true;
+        }
+        return false;
+    }
     return (
         <div>
             <Navbar />

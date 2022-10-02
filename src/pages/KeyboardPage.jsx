@@ -27,7 +27,7 @@ function KeyboardPage() {
                             ))}
                         </ul>
                     </div>
-                    <AddToCartContainer type={"Keyboard"} id={keyboardId-1} title={Keyboard[keyboardId-1].title} img={Keyboard[keyboardId-1].img} price={Keyboard[keyboardId-1].price} />
+                    <AddToCartContainer type={"Keyboard"} id={Cart.length} title={Keyboard[keyboardId-1].title} img={Keyboard[keyboardId-1].img} price={Keyboard[keyboardId-1].price} />
                 </div>
             </div>
             <hr className="hrtag"/>

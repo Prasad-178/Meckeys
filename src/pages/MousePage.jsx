@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AddToCartContainer from "./components/AddToCartContainer";
 import GoToTop from "./components/GoToTop";
+import { Cart } from "../data";
 
 function MousePage() {
     const params = useParams()
@@ -25,7 +26,7 @@ function MousePage() {
                             ))}
                         </ul>
                     </div>
-                    <AddToCartContainer type={"Mouse"} id={mouseId-1} title={Mouse[mouseId-1].title} img={Mouse[mouseId-1].img} price={Mouse[mouseId-1].price} />
+                    <AddToCartContainer type={"Mouse"} id={Cart.length} title={Mouse[mouseId-1].title} img={Mouse[mouseId-1].img} price={Mouse[mouseId-1].price} />
                 </div>
             </div>
             <hr className="hrtag"/>
