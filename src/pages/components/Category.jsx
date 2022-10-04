@@ -14,7 +14,9 @@ const CategoryDiv = styled.div`
 
 const BuyNow = styled.div`
     color: white;
+    font-size: 12px;
     background-color: black;
+    padding: 10px;
     position: absolute;
     border: 2px solid black;
     margin-left: 150px;
@@ -55,7 +57,7 @@ function Category(props) {
                 <CategoryDiv>
                     {Mouse.map((item) => (
                         <div className="divproductbox">
-                            <BuyNow className="buynowButton">BUY NOW</BuyNow>
+                            <BuyNow><button className="buynowButton">BUY NOW</button></BuyNow>
                             <CategoryContentBox className="catconbox" type="mouse" link={idClicked} extractId = {() => extractId(item.id)} url={item.img} key={item.id} title={item.title} price={item.price}></CategoryContentBox>
                         </div>
                     ))}
@@ -80,7 +82,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : null}
+                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL KEYBOARDS</button> </Link> : null}
             </div>
         )
     }
@@ -100,7 +102,7 @@ function Category(props) {
                         </div>
                     ))}
                 </CategoryDiv>
-                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL MICE</button> </Link> : null}
+                {url() ? <Link to="mouse-list"> <button className="seeProducts">SEE ALL HEADPHONES</button> </Link> : null}
             </div>
         )
     }

@@ -1,9 +1,10 @@
 import React from 'react'
+import EmptyCart from './EmptyCart'
 import styled from 'styled-components'
 import { TextField } from '@mui/material'
 import { Cart } from '../../data'
 import DeleteIcon from '@mui/icons-material/Delete';
-import { json, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CartMain = styled.div`
     display: flex;
@@ -22,6 +23,10 @@ const CartComponentDiv = styled.div`
     margin-bottom: 20px;
 `
 
+const CartSummary = styled.div`
+    
+`
+
 const CartComponent = () => {
     const navigate = useNavigate()
     function removeCart(id) {
@@ -33,17 +38,20 @@ const CartComponent = () => {
         {Cart.map((item) => (
             console.log(item.id)
         ))}
-        navigate('/cart') 
+        navigate('/cart')
     }
 
     function cartIsEmpty() {
-        if (Cart.length() === 0) {
+        if (Cart.length === 0) {
             return true;
         }
-        return false;
+        else {
+            return false;
+        }
     }
 
   return (
+    cartIsEmpty() ? <EmptyCart /> : 
     <CartMain>
         {Cart.map((i) => (
             <div>
@@ -82,6 +90,9 @@ const CartComponent = () => {
                     </div>
                     <br className="brtag"/>
                 </CartComponentDiv>
+                <CartSummary>
+
+                </CartSummary>
                 <hr className="hrtag" />
             </div>
         ))}

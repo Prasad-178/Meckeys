@@ -7,6 +7,7 @@ import KeyboardIcon from '@mui/icons-material/Keyboard';
 import MouseIcon from '@mui/icons-material/Mouse';
 import HeadphonesIcon from '@mui/icons-material/Headphones';
 import { Link } from "react-router-dom";
+import { Cart } from "../../data";
 
 var prevScrollpos = window.scrollY;
 window.onscroll = function() {
@@ -35,7 +36,7 @@ function Navbar() {
                     <Link to="/mouse-list"> <p className="right-nav-element"> <MouseIcon style={{color: "gold"}} /> </p> </Link>
                     <Link to="/headphone-list"> <p className="right-nav-element"> <HeadphonesIcon style={{color: "gold"}} /> </p> </Link>
                     <Link to="/login-register"> <p className="right-nav-element"> <AccountCircleIcon style={{color: "gold"}} /> </p> </Link>
-                    <Link to="/cart"> <Badge badgeContent={4} color="primary" className="right-nav-element cart">
+                    <Link to="/cart"> <Badge badgeContent={Cart.length} color="primary" className="right-nav-element cart">
                         <ShoppingCartOutlined style={{color: "gold"}} />
                         </Badge>
                     </Link>
