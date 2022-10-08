@@ -7,7 +7,6 @@ import GoToTop from "./components/GoToTop";
 import { Cart } from "../data";
 
 function HeadphonePage() {
-    console.log(Cart.length)
     const params = useParams()
     const headphoneId = params.headphoneId
     return (
@@ -15,7 +14,7 @@ function HeadphonePage() {
             <Navbar />
             <div className="prod-main">
                 <div className="leftProductPage">
-                    <img src={Headphones[headphoneId-1].img} alt={Headphones[headphoneId-1].title} width={600} height={360} />
+                    <img className="prodpagepic" src={Headphones[headphoneId-1].img} alt={Headphones[headphoneId-1].title} />
                 </div>
                 <div className="rightProductPage">
                     <h1 className="prodpagehead">{Headphones[headphoneId-1].title}</h1>

@@ -14,7 +14,7 @@ function MousePage() {
             <Navbar />
             <div className="prod-main">
                 <div className="leftProductPage">
-                    <img src={Mouse[mouseId-1].img} alt={Mouse[mouseId-1].title} width={600} height={"auto"} />
+                    <img className="prodpagepic" src={Mouse[mouseId-1].img} alt={Mouse[mouseId-1].title}/>
                 </div>
                 <div className="rightProductPage">
                     <h1 className="prodpagehead">{Mouse[mouseId-1].title}</h1>

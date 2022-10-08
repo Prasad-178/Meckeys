@@ -1346,6 +1346,10 @@ input:focus, textarea:focus {
     .pdlist {
         font-size: 12px;
     }
+
+    .inf {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 440px) {

@@ -7,7 +7,6 @@ import GoToTop from "./components/GoToTop";
 import { Cart } from "../data";
 
 function KeyboardPage() {
-    console.log(Cart.length)
     const params = useParams()
     const keyboardId = params.keyboardId
     return (
