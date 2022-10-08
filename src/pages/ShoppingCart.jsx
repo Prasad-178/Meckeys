@@ -23,6 +23,7 @@ function ShoppingCart() {
                 <CartComponent />
                 <div className="space"></div>
             </div>
+            <div className="space"></div>
             <Footer />
             <GoToTop />
         </div>

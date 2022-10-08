@@ -5,6 +5,7 @@ import GoToTop from './components/GoToTop'
 import { useUserAuth } from '../contexts/UserAuthContext'
 import { auth } from '../firebase'
 import { Navigate, useNavigate } from 'react-router-dom'
+import GoogleIcon from '@mui/icons-material/Google';
 
 function LoginRegister() {
 
@@ -100,6 +101,7 @@ function LoginRegister() {
               <br />
               <button className='loginbutton' type="submit">LOGIN</button>
               <br />
+              
               <a href="/" className='fp'>Forgot password?</a>
             </form>
           </div>

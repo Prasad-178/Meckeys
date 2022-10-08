@@ -19,6 +19,7 @@ import ProtectedRoute from "./pages/components/ProtectedRoute";
 function App() {
   return (
     <UserAuthContextProvider>
+      
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
         <Route path="keyboard-list" element={<ProductsList categoryHeading="Keyboard"/>}></Route>

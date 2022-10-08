@@ -26,10 +26,10 @@ function Navbar() {
         <div className="navbar-main">
             <div className="navbar-div">
                 <div className="left-navbar">
-                    <Link to="/" style={{textDecoration: 'none'}}> <h1 className="heading"> MECKEYS </h1> </Link>
+                    <Link to="/" style={{textDecoration: 'none'}}> <p className="heading"> MECKEYS </p> </Link>
                 </div>
                 <div className="center-navbar">
-                    <SearchField />
+                    <p className="center-nav-element"><SearchField /></p>
                 </div>
                 <div className="right-navbar">
                     <Link to="/keyboard-list"> <p className="right-nav-element"> <KeyboardIcon style={{color: "gold"}} /> </p> </Link>

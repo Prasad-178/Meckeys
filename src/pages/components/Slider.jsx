@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 10%;
     display: flex;
     background-color: #000000;
     position: relative;
@@ -66,6 +66,46 @@ const Button = styled.div`
     &:hover {
         background-color: black;
         opacity: 0.9;
+    }
+
+    @media screen and (max-width: 1150px) {
+        margin-left: 15%;
+        background-color: black;
+        color: white;
+    }
+
+    @media screen and (max-width: 1000px) {
+        margin-top: 250px;
+        margin-left: 15%;
+    }
+
+    @media screen and (max-width: 850px) {
+        margin-left: 15%;
+    }
+
+    @media screen and (max-width: 850px) {
+        margin-left: 15%;
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 650px) {
+        margin-left: 13%;
+        margin-top: 200px;
+    }
+
+    @media screen and (max-width: 490px) {
+        font-size: 10px;
+        padding: 10px;
+        margin-left: 14%;
+        margin-top: 150px;
+    }
+
+    @media screen and (max-width: 430px) {
+        font-size: 7.5px;
+        padding: 10px;
+        margin-left: 14%;
+        margin-top: 120px;
     }
 `
 

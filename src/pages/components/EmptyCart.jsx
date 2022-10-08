@@ -5,10 +5,10 @@ const CartComponentDiv = styled.div`
     color: white;
     display: flex;
     flex-direction: row;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: 6.5%;
+    margin-right: 3.25%;
     margin-top: 20px;
     margin-bottom: 20px;
 `

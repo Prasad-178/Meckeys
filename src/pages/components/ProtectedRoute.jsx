@@ -7,10 +7,6 @@ function ProtectedRoute({children}) {
     const navigate = useNavigate()
     let { user } = useUserAuth()
 
-    // if (!auth) {
-    //     navigate('/login-register')
-    // }
-
     useEffect(() => {
         if (!auth) {
             return navigate('/login-register')

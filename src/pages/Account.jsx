@@ -50,9 +50,12 @@ function Account() {
                         <p className="infkey">EMAIL ADDRESS</p>
                         <p className="infkey">{auth.currentUser ? auth.currentUser.email : "NOT FOUND"}</p>
                     </div>
+                    <div className="inf">
+                        <p className="infkey">EMAIL ADDRESS</p>
+                        <p className="infkey">{auth.currentUser ? auth.currentUser.email : "NOT FOUND"}</p>
+                    </div>
+                    <button className="logout" onClick={handleLogOut}>LOG OUT</button>
                 </div>
-                <div className="space"></div>
-                <button className="logout" onClick={handleLogOut}>LOG OUT</button>
             </div>
             <Footer />
         </div>

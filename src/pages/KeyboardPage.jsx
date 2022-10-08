@@ -15,7 +15,7 @@ function KeyboardPage() {
             <Navbar />
             <div className="prod-main">
                 <div className="leftProductPage">
-                    <img src={Keyboard[keyboardId-1].img} alt={Keyboard[keyboardId-1].title} width={600} height={360} />
+                    <img className="prodpagepic" src={Keyboard[keyboardId-1].img} alt={Keyboard[keyboardId-1].title} />
                 </div>
                 <div className="rightProductPage">
                     <h1 className="prodpagehead">{Keyboard[keyboardId-1].title}</h1>

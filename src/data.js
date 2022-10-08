@@ -377,7 +377,7 @@ export const Mouse = [
     {
         id: 4,
         img: "https://www.meckeys.com/wp-content/uploads/2020/06/Glorious_Model-O-PINK1.jpg",
-        title: "Glorious Model O / O Minus (Pink)",
+        title: "Glorious Model O Minus",
         price: "5,799",
         descimg: [
             {
