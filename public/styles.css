@@ -432,9 +432,9 @@ input:focus, textarea:focus {
     font-size: 28px;
 }
 
-.quantity {
+/* .quantity {
 
-}
+} */
 
 .pricesec {
     color: gold;
@@ -760,9 +760,9 @@ input:focus, textarea:focus {
         font-size: 16px;
     }
 
-    .namediv {
+    /* .namediv {
         font-size: ;
-    }
+    } */
 }
 
 @media screen and (max-width: 1000px) {
@@ -773,6 +773,10 @@ input:focus, textarea:focus {
     .prod-main {
         padding-top: 8%;
         padding-bottom: 8%;
+    }
+
+    .leftProductPage {
+        padding-top: 100px;
     }
 }
 
@@ -812,7 +816,8 @@ input:focus, textarea:focus {
     }
 
     .rightProductPage {
-        scale: 0.7;
+        scale: 0.8;
+        width: 65%;
     }
 
     .prod-main {
@@ -884,7 +889,8 @@ input:focus, textarea:focus {
     }
 
     .rightProductPage {
-        scale: 0.6;
+        scale: 0.8;
+        width: 70%;
     }
 }
 
@@ -1106,7 +1112,7 @@ input:focus, textarea:focus {
     .center-navbar {
         max-width: 300px;
     }
-
+}
 
 @media screen and (max-width: 610px) {
     .feathead {
