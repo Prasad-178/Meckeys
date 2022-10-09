@@ -1,3 +1,7 @@
+# Live Website Link
+[meckeys-dev.web.app](https://meckeys-dev.web.app/)
+This project is hosted on Firebase.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
